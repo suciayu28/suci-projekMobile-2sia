@@ -4,6 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.suci_loyalty"
+
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -29,9 +30,15 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+    }
+
+
+    buildFeatures {
+        viewBinding = true
     }
 }
 
@@ -41,6 +48,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

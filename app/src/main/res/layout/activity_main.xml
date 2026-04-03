@@ -15,15 +15,15 @@
         <!-- JUDUL APP -->
 
         <TextView
-            android:text="Kalkulator Bangun datar"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:textColor="#0D47A1"
-            android:layout_gravity="center"
-            android:layout_marginBottom="25dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="25dp"
+            android:text="Kalkulator Bangun datar"
+            android:textColor="#0D47A1"
+            android:textSize="28sp"
+            android:textStyle="bold" />
 
         <!-- CARD SEGITIGA -->
 
@@ -88,7 +88,6 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
 
         <!-- CARD BOLA -->
 
