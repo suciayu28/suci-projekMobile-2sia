@@ -11,27 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Suciloyalty">
+        <!-- 🔹 PERTEMUAN 4 -->
+        <activity android:name=".pertemuan4.Custom2Activity" />
+        <activity android:name=".pertemuan4.Custom1Activity" />
+        <activity android:name=".pertemuan4.RumusActivity" />
+        <activity android:name=".pertemuan4.MainActivity" />
 
-        <!-- Welcome Activity -->
-        <activity
-            android:name=".pertemuan3.WelcomeActivity"
-            android:exported="false" />
+        <!-- 🔹 PERTEMUAN 3 -->
+        <activity android:name=".pertemuan3.WelcomeActivity" />
 
-        <!-- Login Activity (JADI HALAMAN PERTAMA) -->
-        <activity
-            android:name=".pertemuan3.LoginActivity"
+        <!-- 🔥 LOGIN = HALAMAN PERTAMA -->
+        <activity android:name=".pertemuan3.LoginActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
-        <!-- MainActivity tetap ada tapi bukan launcher -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-
+<!--        <activity-->
+<!--            android:name=".MainActivity"-->
+<!--            android:exported="false" />-->
     </application>
 
 </manifest>

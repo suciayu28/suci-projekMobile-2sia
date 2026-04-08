@@ -1,148 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#E3F2FD">
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:padding="20dp"
+    <TextView
+        android:text="Dashboard"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="Pilih menu:"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnRumus"
+        android:text="Rumus Bangun Ruang"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"/>
 
-        <!-- JUDUL APP -->
+    <Button
+        android:id="@+id/btnCustom1"
+        android:text="Custom 1"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="70dp"
-            android:layout_marginBottom="25dp"
-            android:text="Kalkulator Bangun datar"
-            android:textColor="#0D47A1"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+    <Button
+        android:id="@+id/btnCustom2"
+        android:text="Custom 2"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
-        <!-- CARD SEGITIGA -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:text="Logout"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            card_view:cardCornerRadius="20dp"
-            card_view:cardElevation="10dp"
-            android:layout_marginBottom="25dp">
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:padding="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:text="🔺 Luas Segitiga"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="#1565C0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <EditText
-                    android:id="@+id/alas"
-                    android:hint="Masukkan Alas"
-                    android:inputType="numberDecimal"
-                    android:layout_marginTop="12dp"
-                    android:backgroundTint="#2196F3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <EditText
-                    android:id="@+id/tinggi"
-                    android:hint="Masukkan Tinggi"
-                    android:inputType="numberDecimal"
-                    android:layout_marginTop="12dp"
-                    android:backgroundTint="#2196F3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <Button
-                    android:id="@+id/btnSegitiga"
-                    android:text="Hitung Luas"
-                    android:textColor="#FFFFFF"
-                    android:backgroundTint="#1976D2"
-                    android:layout_marginTop="15dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:id="@+id/hasilSegitiga"
-                    android:text="Hasil"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#0D47A1"
-                    android:layout_marginTop="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <!-- CARD BOLA -->
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            card_view:cardCornerRadius="20dp"
-            card_view:cardElevation="10dp">
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:padding="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:text="⚽ Volume Bola"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="#2E7D32"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <EditText
-                    android:id="@+id/jari"
-                    android:hint="Masukkan Jari-jari"
-                    android:inputType="numberDecimal"
-                    android:layout_marginTop="12dp"
-                    android:backgroundTint="#4CAF50"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <Button
-                    android:id="@+id/btnBola"
-                    android:text="Hitung Volume"
-                    android:textColor="#FFFFFF"
-                    android:backgroundTint="#2E7D32"
-                    android:layout_marginTop="15dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:id="@+id/hasilBola"
-                    android:text="Hasil"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#1B5E20"
-                    android:layout_marginTop="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-</ScrollView>
+</LinearLayout>
