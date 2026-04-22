@@ -74,8 +74,8 @@
                 <View
                     android:layout_width="40dp"
                     android:layout_height="4dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/primary" /> <TextView
+                    android:layout_marginTop="8dp" />
+                <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
