@@ -12,7 +12,6 @@ class baseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Nama binding ini harus sesuai dengan activity_base.xml
         binding = ActivityBaseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -32,8 +31,10 @@ class baseActivity : AppCompatActivity() {
     }
 
     private fun replaceFragment(fragment: Fragment) {
+        // Ganti R.id.fragment_container menjadi binding.fragmentContainer.id
+        // Ini trik supaya editor berhenti komplain merah
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
+            .replace(binding.fragmentContainer.id, fragment)
             .commit()
     }
 }
