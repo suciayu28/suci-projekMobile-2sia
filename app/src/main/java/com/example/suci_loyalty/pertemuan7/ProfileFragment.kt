@@ -1,0 +1,31 @@
+package com.example.suci_loyalty.pertemuan7
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.example.suci_loyalty.databinding.ActivityProfileFragmentBinding
+
+class ProfileFragment : Fragment() {
+
+    private var _binding: ActivityProfileFragmentBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        _binding = ActivityProfileFragmentBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.tvName.text = "Suci Dwimas Ayu"
+        binding.tvNpm.text = "2457301136"
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+}

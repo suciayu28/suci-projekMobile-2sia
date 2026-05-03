@@ -21,16 +21,23 @@
         </activity>
 
         <activity
+            android:name=".pertemuan7.baseActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".pertemuan3.LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
 
         <activity
             android:name=".pertemuan3.WelcomeActivity"
             android:exported="false" />
 
-        <activity
-            android:name=".pertemuan4.MainActivity"
-            android:exported="false" />
+        <activity android:name=".pertemuan4.MainActivity" android:exported="false" />
+        <activity android:name=".pertemuan4.RumusActivity" android:exported="false" />
+        <activity android:name=".pertemuan4.Custom1Activity" android:exported="false" />
+        <activity android:name=".pertemuan4.Custom2Activity" android:exported="false" />
 
         <activity
             android:name=".pertemuan6.WebViewActivity"
