@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pertemuan_3.LoginActivity">
+    tools:context=".pertemuan3.LoginActivity">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/bg_sawah"
-        android:alpha="0.9" /> <View
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#40000000" />
+        android:alpha="0.9" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#40000000" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -41,14 +43,16 @@
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="20dp"
-                    android:src="@drawable/logo_bina_desa" /> <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Selamat Datang"
-                android:textColor="@color/bina_desa_blue"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                    android:src="@drawable/logo_bina_desa" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Selamat Datang"
+                    android:textColor="@color/bina_desa_blue"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -110,6 +114,28 @@
                     android:textColor="#FFFFFF"
                     android:textStyle="bold"
                     app:cornerRadius="10dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Belum punya akun? "
+                        android:textColor="@color/bina_desa_text_gray"
+                        android:textSize="13sp" />
+                    <TextView
+                        android:id="@+id/btnToRegister"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daftar di sini"
+                        android:textColor="@color/bina_desa_blue"
+                        android:textStyle="bold"
+                        android:textSize="13sp" />
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
