@@ -11,6 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Suciloyalty">
         <activity
+            android:name=".pertemuan10.TabFormSuratFragment"
+            android:exported="false" />
+        <activity
+            android:name=".pertemuan10.TabJenisSuratFragment"
+            android:exported="false" />
+        <activity
+            android:name=".pertemuan10.TabRiwayatStatusFragment"
+            android:exported="false" />
+        <activity
+            android:name=".pertemuan10.PermohonanSuratActivity"
+            android:exported="false" />
+        <activity
             android:name=".pertemuan3.RegisterActivity"
             android:exported="false" />
         <activity
