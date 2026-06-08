@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC"
+    android:padding="24dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-80dp"
+        android:layout_marginEnd="-80dp"
+        android:alpha="0.4"
+        app:cardBackgroundColor="#E2E8F0"
+        app:cardCornerRadius="130dp"
+        app:strokeWidth="0dp"
+        app:cardElevation="0dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardMain3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="12dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#E2E8F0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="28dp"
+            android:paddingVertical="40dp">
+
+            <FrameLayout
+                android:layout_width="160dp"
+                android:layout_height="160dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="#F1F5F9"
+                    app:cardCornerRadius="80dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp"
+                    android:alpha="0.8"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="#475569"
+                    app:cardCornerRadius="60dp"
+                    app:cardElevation="4dp"
+                    app:strokeWidth="0dp">
+
+                    <ImageView
+                        android:id="@+id/imgOnboarding3"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center"
+                        android:src="@android:drawable/ic_menu_sort_by_size"
+                        android:contentDescription="Mulai Layanan"
+                        app:tint="#FFFFFF" />
+                </com.google.android.material.card.MaterialCardView>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Pantau Riwayat Status"
+                android:textColor="#0F172A"
+                android:textSize="26sp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="48dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="16dp"
+                android:background="#475569" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="12dp"
+                android:text="Dapatkan notifikasi instan saat surat Anda telah selesai diproses dan siap diambil atau diunduh."
+                android:textColor="#475569"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingMultiplier="1.4"
+                android:gravity="center" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:text="MASUK KE LAYANAN"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.05"
+        app:backgroundTint="#2196F3"
+        app:cornerRadius="16dp"
+        app:elevation="6dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="-60dp"
+        android:layout_marginStart="-60dp"
+        android:alpha="0.3"
+        app:cardBackgroundColor="#E2E8F0"
+        app:cardCornerRadius="90dp"
+        app:strokeWidth="0dp"
+        app:cardElevation="0dp" />
+
+</RelativeLayout>

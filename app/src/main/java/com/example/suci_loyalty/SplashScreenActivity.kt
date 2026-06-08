@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
+import com.example.suci_loyalty.onboarding.OnboardingActivity // 🆕 Import OnboardingActivity baru
 import com.example.suci_loyalty.pertemuan3.LoginActivity
 import com.example.suci_loyalty.pertemuan7.baseActivity
 import kotlinx.coroutines.delay
@@ -32,16 +33,16 @@ class SplashScreenActivity : AppCompatActivity() {
         lifecycleScope.launch {
             delay(2000)
 
-            val sharedPref = getSharedPreferences("session_user", Context.MODE_PRIVATE)
+            // 🛠️ PERBAIKAN UTAMA: Disamakan menjadi "user_pref" agar sinkron dengan wadah LoginActivity kamu
+            val sharedPref = getSharedPreferences("user_pref", Context.MODE_PRIVATE)
             val isLogin = sharedPref.getBoolean("isLogin", false)
 
-            // PERBAIKAN: Arahkan isLogin (true) ke baseActivity
+            // Jika sudah login masuk ke baseActivity, jika belum login arahkan ke OnboardingActivity dulu
             val intent = if (isLogin) {
                 Intent(this@SplashScreenActivity, baseActivity::class.java)
             } else {
-                // Jika kamu ingin bypass/melewati login dulu untuk testing Bottom Nav:
-                // Ganti LoginActivity::class.java menjadi baseActivity::class.java
-                Intent(this@SplashScreenActivity, LoginActivity::class.java)
+                // Diubah dari LoginActivity ke OnboardingActivity agar slide onboarding muncul saat pertama kali aplikasi dibuka
+                Intent(this@SplashScreenActivity, OnboardingActivity::class.java)
             }
 
             startActivity(intent)

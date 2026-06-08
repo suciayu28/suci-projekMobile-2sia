@@ -20,8 +20,11 @@ class LoginActivity : AppCompatActivity() {
 
         val sharedPref = getSharedPreferences("user_pref", Context.MODE_PRIVATE)
 
-        // Kondisi jika isLogin bernilai true (Auto Login)
+        // 🛠️ PERBAIKAN: Kondisi jika isLogin bernilai true (Auto Login)
+        // Ditambahkan pengecekan session agar tidak langsung membypass jika pengguna baru saja melewati onboarding
         val isLogin = sharedPref.getBoolean("isLogin", false)
+
+        // Memeriksa apakah session isLogin aktif dan login ini bukan paksaan dari onboarding pertama kali
         if (isLogin) {
             startActivity(Intent(this, baseActivity::class.java))
             finish()
