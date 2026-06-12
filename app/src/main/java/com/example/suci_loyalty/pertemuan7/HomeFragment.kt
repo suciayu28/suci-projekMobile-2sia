@@ -76,7 +76,6 @@ class HomeFragment : Fragment() {
         }
 
         // --- LOGIKA BARU UNTUK TextInputLayout & SUBMIT FORM (MODUL 9) ---
-
         binding.btnSubmitSurat.setOnClickListener {
             val nik = binding.etNikSurat.text.toString()
             val alasan = binding.etAlasanSurat.text.toString()
@@ -102,7 +101,6 @@ class HomeFragment : Fragment() {
         }
 
         // --- LOGIKA LISTVIEW (SIMPLE ADAPTER) UNTUK PUSAT INFORMASI ---
-
         val menuNames = arrayOf("Kebijakan Privasi", "Tentang Aplikasi", "Syarat & Ketentuan", "Hubungi Kami")
         val menuIcons = arrayOf(
             android.R.drawable.ic_lock_lock,
@@ -135,10 +133,8 @@ class HomeFragment : Fragment() {
         }
 
         // --- AKHIR LOGIKA LISTVIEW ---
-
         binding.rvNews.layoutManager = LinearLayoutManager(requireContext())
 
-        // Menambahkan lebih banyak data berita tiruan agar layout memanjang ke bawah dan bisa di-scroll
         val fallbackNews = listOf(
             NewsItem(
                 title = "Pembangunan Gedung Balai Desa Bina Desa Resmi Dimulai",
@@ -156,24 +152,6 @@ class HomeFragment : Fragment() {
                 title = "Kerja Bakti Massal Antisipasi Dampak Musim Hujan",
                 description = "Kepala Desa menghimbau seluruh warga RT 01 hingga RT 08 untuk berpartisipasi aktif dalam aksi pembersihan saluran gorong-gorong desa pada akhir pekan ini.",
                 image = "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca",
-                link = "https://google.com"
-            ),
-            NewsItem(
-                title = "Pelatihan Digital Marketing UMKM Desa Sukamaju",
-                description = "Dalam rangka meningkatkan omset penjualan produk lokal, perangkat desa menyelenggarakan pelatihan optimalisasi media sosial bagi para pelaku usaha rumahan.",
-                image = "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-                link = "https://google.com"
-            ),
-            NewsItem(
-                title = "Posyandu Balita dan Lansia Serentak di RW 03",
-                description = "Kader PKK desa mengumumkan pelaksanaan pemeriksaan kesehatan gratis, imunisasi balita, serta pemberian makanan tambahan (PMT) esok hari pukul 08.00 WIB.",
-                image = "https://images.unsplash.com/photo-1505751172876-fa1923c5c528",
-                link = "https://google.com"
-            ),
-            NewsItem(
-                title = "Pemasangan Lampu Jalan Baru di Area Minim Penerangan",
-                description = "Guna meminimalisir angka kriminalitas dan kecelakaan lalu lintas malam hari, dinas sosial mendistribusikan 20 unit lampu LED untuk jalan utama desa.",
-                image = "https://images.unsplash.com/photo-1509024644558-2f56ce76c490",
                 link = "https://google.com"
             )
         )

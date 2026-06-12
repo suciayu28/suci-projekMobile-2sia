@@ -10,7 +10,12 @@
         android:layout_height="220dp"
         android:background="@drawable/bg_wave_home" />
 
-    <!-- 🛠️ PERBAIKAN 1: Mengubah ScrollView menjadi androidx.core.widget.NestedScrollView -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp" />
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -385,7 +390,6 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- KARTU BERITA PUBLIC -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -411,8 +415,6 @@
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
-                    <!-- 🛠️ PERBAIKAN 2: Mengubah height ke wrap_content agar RecyclerView
-                         menyesuaikan jumlah item berita dan mengalir bersama NestedScrollView -->
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rvNews"
                         android:layout_width="match_parent"
@@ -464,4 +466,5 @@
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+
 </FrameLayout>

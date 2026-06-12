@@ -10,63 +10,51 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Suciloyalty">
-
+        <activity
+            android:name=".note.NoteFormActivity"
+            android:exported="false" />
         <!-- 1. SPLASH SCREEN (Sebagai Pintu Utama Aplikasi / LAUNCHER) -->
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- 2. ONBOARDING (Dipanggil setelah Splash Screen selesai) -->
+        </activity> <!-- 2. ONBOARDING (Dipanggil setelah Splash Screen selesai) -->
         <activity
             android:name=".onboarding.OnboardingActivity"
-            android:exported="false" />
-
-        <!-- 3. LOGIN (Dipanggil dari Onboarding) -->
+            android:exported="false" /> <!-- 3. LOGIN (Dipanggil dari Onboarding) -->
         <activity
             android:name=".pertemuan3.LoginActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan" />
-
-        <!-- 4. DASHBOARD UTAMA / BASE ACTIVITY (Dipanggil setelah sukses Login) -->
+            android:windowSoftInputMode="adjustPan" /> <!-- 4. DASHBOARD UTAMA / BASE ACTIVITY (Dipanggil setelah sukses Login) -->
         <activity
             android:name=".pertemuan7.baseActivity"
             android:exported="false"
-            android:screenOrientation="portrait" />
-
-        <!-- SISA AKTIVITAS LAIN (Tidak diubah, tetap pada posisinya) -->
+            android:screenOrientation="portrait" /> <!-- SISA AKTIVITAS LAIN (Tidak diubah, tetap pada posisinya) -->
         <activity
             android:name=".pertemuan10.PermohonanSuratActivity"
             android:exported="false" />
-
         <activity
             android:name=".pertemuan3.RegisterActivity"
             android:exported="false" />
-
         <activity
             android:name=".pertemuan3.WelcomeActivity"
             android:exported="false" />
-
         <activity
             android:name=".pertemuan4.MainActivity"
             android:exported="false" />
-
         <activity
             android:name=".pertemuan4.RumusActivity"
             android:exported="false" />
-
         <activity
             android:name=".pertemuan4.Custom1Activity"
             android:exported="false" />
-
         <activity
             android:name=".pertemuan4.Custom2Activity"
             android:exported="false" />
-
         <activity
             android:name=".pertemuan6.WebViewActivity"
             android:exported="false" />

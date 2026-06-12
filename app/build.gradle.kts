@@ -1,5 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
+    // TAMBAHKAN LINE INI
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -62,4 +64,12 @@ dependencies {
 
     // Tambahan untuk Dots Indicator Onboarding
     implementation("com.tbuonomo:dotsindicator:5.1.0")
+
+    // ==========================================
+    // TAMBAHKAN DEPENDENSI ROOM DI BAWAH INI
+    // ==========================================
+    val room_version = "2.7.0"
+    implementation("androidx.room:room-runtime:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+    ksp("androidx.room:room-compiler:$room_version")
 }

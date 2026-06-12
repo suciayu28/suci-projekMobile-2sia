@@ -24,6 +24,8 @@ class baseActivity : AppCompatActivity() {
                 R.id.menu_home -> replaceFragment(HomeFragment())
                 R.id.menu_about -> replaceFragment(AboutFragment())
                 R.id.menu_profile -> replaceFragment(ProfileFragment())
+                R.id.note -> replaceFragment(com.example.suci_loyalty.note.NoteFragment())
+
                 else -> false
             }
             true
@@ -31,8 +33,6 @@ class baseActivity : AppCompatActivity() {
     }
 
     private fun replaceFragment(fragment: Fragment) {
-        // Ganti R.id.fragment_container menjadi binding.fragmentContainer.id
-        // Ini trik supaya editor berhenti komplain merah
         supportFragmentManager.beginTransaction()
             .replace(binding.fragmentContainer.id, fragment)
             .commit()
