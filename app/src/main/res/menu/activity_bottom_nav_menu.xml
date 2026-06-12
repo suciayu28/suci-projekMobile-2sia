@@ -18,4 +18,9 @@
         android:id="@+id/note"
         android:icon="@drawable/ic_notes"
         android:title="Notes" />
+
+    <item
+        android:id="@+id/complain"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Pengaduan" />
 </menu>

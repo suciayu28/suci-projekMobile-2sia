@@ -1,9 +1,11 @@
 package com.example.suci_loyalty.pertemuan7
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.suci_loyalty.R
+import com.example.suci_loyalty.complain.ComplaintFragment
 import com.example.suci_loyalty.databinding.ActivityBaseBinding
 
 class baseActivity : AppCompatActivity() {
@@ -25,6 +27,10 @@ class baseActivity : AppCompatActivity() {
                 R.id.menu_about -> replaceFragment(AboutFragment())
                 R.id.menu_profile -> replaceFragment(ProfileFragment())
                 R.id.note -> replaceFragment(com.example.suci_loyalty.note.NoteFragment())
+
+                // ➔ Cuma menyelipkan menu complain di sini untuk membuka halaman form pengaduan
+                R.id.complain -> replaceFragment(ComplaintFragment())
+
 
                 else -> false
             }

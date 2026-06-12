@@ -50,6 +50,11 @@ class NoteFragment : Fragment() {
         // Panggil fungsi untuk mengambil data dari database
         fetchNotes()
 
+        // 🛠️ TOMBOL BACK BARU: Mengembalikan halaman/menutup Fragment/Activity
+        binding.btnBack.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
+
         // Logika ketika tombol FloatingActionButton (+) diklik
         binding.fabAddNote.setOnClickListener {
             // Membuka form Input Database Room Anda

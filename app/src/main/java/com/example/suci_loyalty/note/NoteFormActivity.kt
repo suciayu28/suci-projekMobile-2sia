@@ -21,18 +21,18 @@ class NoteFormActivity : AppCompatActivity() {
         binding = ActivityNoteFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Tombol back untuk menutup activity jika batal
-        binding.toolbar.setNavigationOnClickListener {
-            finish()
-        }
-
         // 2. Inisialisasi DB untuk memanggil noteDao().insert() sesuai modul
         db = AppDatabase.getInstance(this)
 
+        // Tombol back untuk menutup activity jika batal mengisi form
+        binding.btnBack.setOnClickListener {
+            finish()
+        }
+
         // 3. Logika saat tombol Save diklik sesuai gambar modul
         binding.btnSaveNote.setOnClickListener {
-            val title = binding.etTitle.text.toString()
-            val content = binding.etContent.text.toString()
+            val title = binding.etTitle.text.toString().trim()
+            val content = binding.etContent.text.toString().trim()
 
             // Cek jika title dan content tidak kosong
             if (title.isNotBlank() && content.isNotBlank()) {
@@ -44,6 +44,8 @@ class NoteFormActivity : AppCompatActivity() {
                         createdAt = System.currentTimeMillis()
                     )
                     db.noteDao().insert(note)
+
+                    Toast.makeText(this@NoteFormActivity, "Catatan berhasil disimpan!", Toast.LENGTH_SHORT).show()
                     finish()
                 }
             } else {

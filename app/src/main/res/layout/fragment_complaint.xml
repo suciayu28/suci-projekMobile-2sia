@@ -19,39 +19,26 @@
             android:background="@color/bina_desa_blue"
             android:padding="24dp">
 
-            <ImageView
-                android:id="@+id/btnBack"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+            <TextView
+                android:id="@+id/toolbarComplaint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:contentDescription="Kembali"
-                android:src="@android:drawable/ic_menu_revert"
-                android:rotation="180"
-                app:tint="@android:color/white"
+                android:text="Riwayat Pengaduan"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
-                android:id="@+id/toolbarNote"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:text="Daftar Catatan Mandiri"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="@id/btnBack"
-                app:layout_constraintBottom_toBottomOf="@id/btnBack"
-                app:layout_constraintStart_toEndOf="@id/btnBack" />
-
-            <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Arsip keperluan administrasi &amp; surat warga"
+                android:layout_marginTop="4dp"
+                android:text="Layanan Mandiri &amp; Aspirasi Online Desa"
                 android:textColor="#E0E0E0"
                 android:textSize="13sp"
-                app:layout_constraintTop_toBottomOf="@id/toolbarNote"
+                app:layout_constraintTop_toBottomOf="@id/toolbarComplaint"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
@@ -75,7 +62,7 @@
             android:paddingBottom="80dp">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvNotes"
+                android:id="@+id/rvComplaints"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:listitem="@android:layout/simple_list_item_2" />
@@ -84,12 +71,12 @@
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabAddNote"
+        android:id="@+id/fabAddComplaint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="24dp"
-        android:contentDescription="Tambah Catatan"
+        android:contentDescription="Tambah Pengaduan"
         android:backgroundTint="@color/bina_desa_blue"
         app:tint="@android:color/white"
         app:srcCompat="@android:drawable/ic_input_add"

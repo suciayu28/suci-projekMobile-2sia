@@ -13,6 +13,9 @@
         <activity
             android:name=".note.NoteFormActivity"
             android:exported="false" />
+        <activity
+            android:name=".complain.ComplaintFormActivity"
+            android:exported="false" />
         <!-- 1. SPLASH SCREEN (Sebagai Pintu Utama Aplikasi / LAUNCHER) -->
         <activity
             android:name=".SplashScreenActivity"
