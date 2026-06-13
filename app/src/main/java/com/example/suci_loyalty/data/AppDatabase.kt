@@ -17,7 +17,7 @@ import com.example.suci_loyalty.data.dao.ComplaintDao
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun noteDao(): NoteDao
-    abstract fun complaintDao(): ComplaintDao // ➔ Menyelipkan abstract fungsi ini
+    abstract fun complaintDao(): ComplaintDao
 
     companion object {
         @Volatile
@@ -30,7 +30,7 @@ abstract class AppDatabase : RoomDatabase() {
                     AppDatabase::class.java,
                     "app_database"
                 )
-                    .fallbackToDestructiveMigration() // ➔ Menyelipkan ini agar aplikasi tidak crash saat versinya naik ke 2
+                    .fallbackToDestructiveMigration()
                     .build()
                     .also { INSTANCE = it }
             }

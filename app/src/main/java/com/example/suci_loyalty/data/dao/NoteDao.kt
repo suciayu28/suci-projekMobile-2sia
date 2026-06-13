@@ -13,8 +13,6 @@ interface NoteDao {
 
     @Insert
     suspend fun insert(note: NoteEntity)
-
-    // 🛠️ TAMBAHAN: Fungsi untuk menghapus data catatan dari database Room sesuai modul
     @Delete
     suspend fun delete(note: NoteEntity)
 }
