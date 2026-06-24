@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorSurface"
-    tools:context=".ComplaintFormActivity">
+    tools:context=".complain.ComplaintFormActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -119,7 +119,7 @@
                 android:id="@+id/tilDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="28dp"
+                android:layout_marginBottom="16dp"
                 android:hint="Deskripsi Lengkap Laporan"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:boxCornerRadiusTopStart="12dp"
@@ -139,6 +139,31 @@
                     android:textColor="?attr/colorOnSurface"
                     android:inputType="textMultiLine"
                     android:lines="6" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilReminderMinutes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                android:hint="Atur Pengingat Status (Dalam Menit)"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxStrokeColor="@color/bina_desa_blue"
+                app:hintTextColor="@color/bina_desa_blue"
+                app:startIconDrawable="@android:drawable/ic_lock_idle_alarm"
+                app:startIconTint="@color/bina_desa_blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etReminderMinutes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorOnSurface"
+                    android:inputType="number"
+                    android:text="1" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton

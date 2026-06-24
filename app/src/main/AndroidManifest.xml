@@ -3,6 +3,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- TAMBAHAN IZIN UNTUK NOTIFIKASI DAN ALARM REMINDER (TUGAS P14) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Suciloyalty">
+
+        <!-- TAMBAHAN PENDAFTARAN BROADCAST RECEIVER UNTUK ALARM REMINDER -->
+        <receiver
+            android:name=".utils.ReminderReceiver"
+            android:exported="false" />
+
         <activity
             android:name=".note.NoteFormActivity"
             android:exported="false" />
