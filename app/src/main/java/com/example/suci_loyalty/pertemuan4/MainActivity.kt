@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         // Menjadikan widget Toolbar di XML sebagai ActionBar resmi
         val toolbar = findViewById<Toolbar>(R.id.toolbarMain)
         setSupportActionBar(toolbar)
-        supportActionBar?.title = "Dashboard Bina Desa"
+        supportActionBar?.title = "Dashboard SakuSurat"
 
         // 2. INISIALISASI WIDGET
         val btnWebView = findViewById<Button>(R.id.btnWebView)

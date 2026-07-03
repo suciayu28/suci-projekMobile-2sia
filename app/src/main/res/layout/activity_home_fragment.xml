@@ -53,7 +53,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Layanan Desa"
+                        android:text="SakuSurat"
                         android:textColor="@color/white"
                         android:textSize="28sp"
                         android:textStyle="bold"
@@ -163,7 +163,7 @@
                         android:layout_height="65dp"
                         android:layout_marginBottom="16dp"
                         android:backgroundTint="#1A237E"
-                        android:text="Portal Web Bina Desa"
+                        android:text="Portal Web SakuSurat"
                         android:textAllCaps="false"
                         android:textSize="16sp"
                         android:textStyle="bold"
@@ -453,7 +453,7 @@
                 <TextView
                     android:layout_columnWeight="1"
                     android:gravity="center"
-                    android:text="Layanan Desa © 2026"
+                    android:text="SakuSurat © 2026"
                     android:textColor="#80FFFFFF"
                     android:textSize="10sp" />
                 <TextView

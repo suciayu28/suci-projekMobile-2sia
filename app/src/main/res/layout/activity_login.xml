@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="32dp"
-                    android:text="Portal Layanan Bina Desa"
+                    android:text="Portal Layanan SakuSurat"
                     android:textColor="@color/bina_desa_text_gray"
                     android:textSize="14sp" />
 
@@ -142,7 +142,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="28dp"
-                    android:text="© 2026 Sistem Layanan Bina Desa"
+                    android:text="© 2026 Sistem Layanan SakuSurat"
                     android:textColor="@color/bina_desa_text_gray"
                     android:textSize="10sp" />
 

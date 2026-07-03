@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/bina_desa_blue"
-        app:title="Layanan Web Bina Desa"
+        app:title="Layanan SakuSurat"
         app:titleTextColor="@color/white" />
 
     <WebView
