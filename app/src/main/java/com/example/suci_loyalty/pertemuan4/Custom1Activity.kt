@@ -1,8 +1,8 @@
 package com.example.suci_loyalty.pertemuan4
 
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.example.suci_loyalty.R
 
 class Custom1Activity : AppCompatActivity() {
@@ -11,10 +11,14 @@ class Custom1Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_custom1)
 
-        val title = intent.getStringExtra("title")
-        val desc = intent.getStringExtra("desc")
+        // Setup Toolbar & Back Button
+        val toolbar = findViewById<Toolbar>(R.id.toolbarCustom1)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Profil Desa SakuSurat"
 
-        findViewById<TextView>(R.id.tvTitle).text = title
-        findViewById<TextView>(R.id.tvDesc).text = desc
+        toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 }

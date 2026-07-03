@@ -9,8 +9,8 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 
 object NotificationHelper {
-    private const val CHANNEL_ID = "bina_desa_notification_channel"
-    private const val CHANNEL_NAME = "Notifikasi Bina Desa"
+    private const val CHANNEL_ID = "sakusurat_notification_channel"
+    private const val CHANNEL_NAME = "Notifikasi SakuSurat"
 
     fun showNotification(context: Context, title: String, message: String, intent: Intent) {
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager

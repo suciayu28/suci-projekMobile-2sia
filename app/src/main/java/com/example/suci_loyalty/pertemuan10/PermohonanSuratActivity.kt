@@ -9,6 +9,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 class PermohonanSuratActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPermohonanSuratBinding
+    var selectedLetterName: String = "Surat Keterangan Domisili"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +34,43 @@ class PermohonanSuratActivity : AppCompatActivity() {
                 else -> "Tab"
             }
         }.attach()
+
+        // Set target tab if passed via intent
+        val targetTab = intent.getIntExtra("target_tab", 0)
+        if (targetTab in 0..2) {
+            binding.viewPager.post {
+                binding.viewPager.currentItem = targetTab
+            }
+        }
+
+        // 4. Sinkronisasi perubahan halaman untuk memperbarui data fragmen
+        binding.viewPager.registerOnPageChangeCallback(object : androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                if (position == 1) {
+                    notifyFormFragment()
+                } else if (position == 2) {
+                    val fragment = supportFragmentManager.findFragmentByTag("f2") as? TabRiwayatStatusFragment
+                    fragment?.fetchRiwayatStatus()
+                }
+            }
+        })
+    }
+
+    fun switchToFormTab() {
+        binding.viewPager.currentItem = 1
+        notifyFormFragment()
+    }
+
+    fun switchToHistoryTab() {
+        binding.viewPager.currentItem = 2
+        val fragment = supportFragmentManager.findFragmentByTag("f2") as? TabRiwayatStatusFragment
+        fragment?.fetchRiwayatStatus()
+    }
+
+    fun notifyFormFragment() {
+        val fragment = supportFragmentManager.findFragmentByTag("f1") as? TabFormSuratFragment
+        fragment?.updateSelectedLetter()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

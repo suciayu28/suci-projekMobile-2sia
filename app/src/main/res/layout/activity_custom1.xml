@@ -1,101 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA"
-    android:fillViewport="true">
+    android:orientation="vertical"
+    android:background="#F8F9FA">
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarCustom1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/bina_desa_blue"
+        app:title="Profil Desa"
+        app:titleTextColor="@color/white" />
 
-        <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Custom 1"
-            android:textColor="#1A1A1A"
-            android:textSize="32sp"
-            android:fontFamily="sans-serif-black"
-            android:letterSpacing="-0.02" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <TextView
-            android:id="@+id/tvDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="32dp"
-            android:text="Detail informasi aplikasi mobile"
-            android:textColor="#757575"
-            android:textSize="16sp"
-            android:fontFamily="sans-serif-medium" />
-
-        <com.google.android.material.card.MaterialCardView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="24dp"
-            app:cardElevation="8dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:strokeWidth="0dp">
+            android:orientation="vertical"
+            android:padding="24dp">
 
-            <LinearLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tentang Layanan Desa"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/bina_desa_blue"/>
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/bina_desa_blue" />
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="24dp">
+                android:layout_marginTop="20dp"
+                android:text="Aplikasi SakuSurat hadir untuk mewujudkan tata kelola administrasi desa yang lebih modern dan transparan melalui dua pilar utama:"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:lineSpacingExtra="4dp"/>
 
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="20dp"
-                    app:cardCornerRadius="50dp"
-                    app:cardElevation="0dp"
-                    app:cardBackgroundColor="#F0F2F5">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0">
 
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/custom1" />
-                </com.google.android.material.card.MaterialCardView>
-
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Tentang Aplikasi"
-                    android:textColor="#1A1A1A"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                <View
-                    android:layout_width="40dp"
-                    android:layout_height="4dp"
-                    android:layout_marginTop="8dp" />
-                <TextView
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1. Layanan Mandiri"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/bina_desa_blue"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Memberikan akses penuh kepada warga untuk melihat data kependudukan secara mandiri, memantau status bantuan, serta memperbarui informasi profil tanpa harus melalui proses birokrasi yang rumit."
+                        android:textColor="#555555"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="3dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:lineSpacingExtra="6sp"
-                android:text="Aplikasi ini dibuat untuk menghitung bangun ruang dan menampilkan halaman custom sesuai tugas mobile."
-                android:textColor="#4A4A4A"
-                android:textSize="15sp" />
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0">
 
-                <Button
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:text="Mulai Hitung"
-                    android:textAllCaps="false"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    app:cornerRadius="12dp" />
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2. Administrasi Surat"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/bina_desa_blue"/>
 
-    </LinearLayout>
-</ScrollView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Digitalisasi permohonan surat menyurat seperti Surat Pengantar, Surat Keterangan Tidak Mampu (SKTM), hingga Surat Domisili. Warga cukup mengajukan lewat aplikasi dan mengambil surat yang sudah jadi di kantor desa."
+                        android:textColor="#555555"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="3dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:text="SakuSurat - Dibuat untuk Indonesia yang lebih Digital."
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:textStyle="italic"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

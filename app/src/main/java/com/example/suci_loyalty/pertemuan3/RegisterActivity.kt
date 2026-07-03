@@ -18,6 +18,15 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Setup Toolbar & Back Button
+        setSupportActionBar(binding.toolbarRegister)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Registrasi Akun"
+
+        binding.toolbarRegister.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+
         // 1. Setup Dropdown Agama (Soal 1)
         val listAgama = arrayOf("Islam", "Kristen", "Katolik", "Hindu", "Budha", "Konghucu")
         val adapterAgama = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, listAgama)

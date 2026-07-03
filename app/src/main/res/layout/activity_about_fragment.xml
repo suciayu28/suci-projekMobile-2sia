@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Program Bina Desa hadir untuk mewujudkan tata kelola administrasi desa yang lebih modern dan transparan melalui dua pilar utama:"
+            android:text="Aplikasi SakuSurat hadir untuk mewujudkan tata kelola administrasi desa yang lebih modern dan transparan melalui dua pilar utama:"
             android:textSize="16sp"
             android:textColor="#333333"
             android:lineSpacingExtra="4dp"/>

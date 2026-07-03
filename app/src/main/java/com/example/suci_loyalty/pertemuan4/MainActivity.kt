@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         btnLogout?.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Konfirmasi Keluar")
-                .setMessage("Apakah Anda yakin ingin logout dari aplikasi Bina Desa?")
+                .setMessage("Apakah Anda yakin ingin logout dari aplikasi SakuSurat?")
                 .setPositiveButton("Ya") { dialog, _ ->
 
                     // PERBAIKAN: Nama harus "user_pref" agar sama dengan LoginActivity

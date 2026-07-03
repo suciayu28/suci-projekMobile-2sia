@@ -28,18 +28,20 @@
             android:textColor="#64748B"
             android:textSize="13sp" />
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="2dp">
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@android:color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="20dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -62,13 +64,20 @@
                     android:layout_height="wrap_content"
                     android:hint="Jenis Surat"
                     android:layout_marginBottom="16dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
                     app:boxStrokeColor="@color/bina_desa_blue"
-                    app:hintTextColor="@color/bina_desa_blue">
+                    app:hintTextColor="@color/bina_desa_blue"
+                    app:startIconDrawable="@android:drawable/ic_menu_agenda"
+                    app:startIconTint="@color/bina_desa_blue">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_jenis_surat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Surat Keterangan Domisili"
+                        android:textColor="@color/black"
                         android:enabled="false" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,15 +87,21 @@
                     android:layout_height="wrap_content"
                     android:hint="NIK Pemohon *"
                     android:layout_marginBottom="16dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
                     app:boxStrokeColor="@color/bina_desa_blue"
                     app:helperText="NIK harus 16 digit"
                     app:hintTextColor="@color/bina_desa_blue"
-                    app:startIconDrawable="@android:drawable/ic_menu_edit">
+                    app:startIconDrawable="@android:drawable/ic_menu_edit"
+                    app:startIconTint="@color/bina_desa_blue">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_nik_permohonan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
+                        android:textColor="@color/black"
                         android:maxLength="16" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,12 +111,19 @@
                     android:layout_height="wrap_content"
                     android:hint="Keperluan / Catatan Tambahan *"
                     android:layout_marginBottom="16dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
                     app:boxStrokeColor="@color/bina_desa_blue"
-                    app:hintTextColor="@color/bina_desa_blue">
+                    app:hintTextColor="@color/bina_desa_blue"
+                    app:startIconDrawable="@android:drawable/ic_menu_info_details"
+                    app:startIconTint="@color/bina_desa_blue">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_keperluan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:gravity="top"
                         android:inputType="textMultiLine"
                         android:lines="4" />
@@ -116,12 +138,12 @@
                     android:textAllCaps="false"
                     android:textStyle="bold"
                     app:backgroundTint="@color/bina_desa_blue"
-                    app:cornerRadius="8dp"
+                    app:cornerRadius="12dp"
                     app:icon="@android:drawable/ic_menu_send"
                     app:iconGravity="textStart" />
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
         <TextView
             android:layout_width="match_parent"

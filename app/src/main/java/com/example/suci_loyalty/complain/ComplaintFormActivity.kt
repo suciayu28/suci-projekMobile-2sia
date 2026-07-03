@@ -56,6 +56,10 @@ class ComplaintFormActivity : AppCompatActivity() {
         etReminderMinutes = findViewById(R.id.etReminderMinutes)
         btnSaveComplaint = findViewById(R.id.btnSaveComplaint)
 
+        findViewById<android.view.View>(R.id.btnBack)?.setOnClickListener {
+            finish()
+        }
+
         btnSaveComplaint.setOnClickListener {
             saveComplaintData()
         }
@@ -88,7 +92,7 @@ class ComplaintFormActivity : AppCompatActivity() {
             // 1. Kirim Local Notification Instan bahwa laporan sukses
             NotificationHelper.showNotification(
                 this@ComplaintFormActivity,
-                "Bina Desa - Pengaduan Sukses",
+                "SakuSurat - Pengaduan Sukses",
                 "Laporan \"$title\" telah sukses dikirim ke sistem admin desa.",
                 intentDestination
             )

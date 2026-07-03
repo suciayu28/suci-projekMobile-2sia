@@ -23,7 +23,7 @@ class WebViewActivity : AppCompatActivity() {
 
         // Aktifkan tombol back di toolbar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Layanan Bina Desa" // Opsional: Set judul di sini
+        supportActionBar?.title = "Layanan SakuSurat" // Opsional: Set judul di sini
 
         toolbar.setNavigationOnClickListener {
             onBackPressedDispatcher.onBackPressed()

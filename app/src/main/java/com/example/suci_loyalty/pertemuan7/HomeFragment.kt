@@ -49,12 +49,20 @@ class HomeFragment : Fragment() {
 
         // 3. Tombol Custom 1 (Profil Desa)
         binding.btnCustom1.setOnClickListener {
-            startActivity(Intent(requireContext(), Custom1Activity::class.java))
+            val intent = Intent(requireContext(), Custom1Activity::class.java).apply {
+                putExtra("title", "Profil Desa")
+                putExtra("desc", "Detail informasi kependudukan dan profil pemerintahan Desa Maju Jaya.")
+            }
+            startActivity(intent)
         }
 
         // 4. Tombol Custom 2 (Bantuan)
         binding.btnCustom2.setOnClickListener {
-            startActivity(Intent(requireContext(), Custom2Activity::class.java))
+            val intent = Intent(requireContext(), Custom2Activity::class.java).apply {
+                putExtra("title", "Pusat Bantuan")
+                putExtra("desc", "Pilih dan hitung volume/luas bangun ruang secara mandiri.")
+            }
+            startActivity(intent)
         }
 
         // 5. Logika ChipGroup (Kategori Surat)
@@ -67,12 +75,18 @@ class HomeFragment : Fragment() {
 
         // 6. Tombol Buat Surat
         binding.btnSuratMandiri.setOnClickListener {
-            Toast.makeText(requireContext(), "Membuka Form Pengajuan Surat", Toast.LENGTH_SHORT).show()
+            val intent = Intent(requireContext(), PermohonanSuratActivity::class.java).apply {
+                putExtra("target_tab", 1) // Form Pengajuan
+            }
+            startActivity(intent)
         }
 
         // 7. Tombol Status Surat
         binding.btnStatusSurat.setOnClickListener {
-            Toast.makeText(requireContext(), "Cek Status: Dalam Proses Verifikasi", Toast.LENGTH_SHORT).show()
+            val intent = Intent(requireContext(), PermohonanSuratActivity::class.java).apply {
+                putExtra("target_tab", 2) // Riwayat Status
+            }
+            startActivity(intent)
         }
 
         // --- LOGIKA BARU UNTUK TextInputLayout & SUBMIT FORM (MODUL 9) ---
@@ -179,7 +193,7 @@ class HomeFragment : Fragment() {
         binding.btnLogout.setOnClickListener {
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle("Konfirmasi")
-                .setMessage("Yakin ingin logout dari aplikasi Bina Desa?")
+                .setMessage("Yakin ingin logout dari aplikasi SakuSurat?")
                 .setPositiveButton("Ya") { _, _ ->
                     val sharedPref = requireActivity().getSharedPreferences("user_pref", Context.MODE_PRIVATE)
                     sharedPref.edit().clear().apply()

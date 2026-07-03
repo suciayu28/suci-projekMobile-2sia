@@ -3,10 +3,15 @@ package com.example.suci_loyalty.pertemuan10
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.suci_loyalty.data.entity.JenisSuratEntity
 import com.example.suci_loyalty.databinding.ItemJenisSuratBinding
 
-class JenisSuratAdapter(private val listJenisSurat: List<JenisSuratModel>) :
-    RecyclerView.Adapter<JenisSuratAdapter.ViewHolder>() {
+class JenisSuratAdapter(
+    private val listJenisSurat: List<JenisSuratEntity>,
+    private val onSelectClick: (JenisSuratEntity) -> Unit,
+    private val onEditClick: (JenisSuratEntity) -> Unit,
+    private val onDeleteClick: (JenisSuratEntity) -> Unit
+) : RecyclerView.Adapter<JenisSuratAdapter.ViewHolder>() {
 
     // Menggunakan Binding untuk menghubungkan ke layout item_jenis_surat.xml
     class ViewHolder(val binding: ItemJenisSuratBinding) : RecyclerView.ViewHolder(binding.root)
@@ -32,9 +37,17 @@ class JenisSuratAdapter(private val listJenisSurat: List<JenisSuratModel>) :
             android.graphics.Color.parseColor(colors[position % colors.size])
         )
 
-        // Setup klik tombol (Optional)
+        // Setup klik tombol
         holder.binding.btnLihat.setOnClickListener {
-            // Logika saat tombol Detail diklik
+            onSelectClick(item)
+        }
+
+        holder.binding.btnEdit.setOnClickListener {
+            onEditClick(item)
+        }
+
+        holder.binding.btnHapus.setOnClickListener {
+            onDeleteClick(item)
         }
     }
 

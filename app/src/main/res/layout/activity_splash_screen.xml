@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="© 2026 Sistem Layanan Bina Desa"
+        android:text="© 2026 Aplikasi Layanan SakuSurat"
         android:textColor="#374151"
         android:textSize="12sp"
         android:textStyle="bold"

@@ -9,7 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     android:background="@android:color/transparent"
-    app:title="Dashboard Bina Desa"
+    app:title="Dashboard SakuSurat"
     app:titleTextColor="@color/white" />
 
     <ScrollView
@@ -67,7 +67,7 @@
 
                     <Button
                         android:id="@+id/btnWebView"
-                        android:text="Web View Bina Desa"
+                        android:text="Portal Web SakuSurat"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textStyle="bold"

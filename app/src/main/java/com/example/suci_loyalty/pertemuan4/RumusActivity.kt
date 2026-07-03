@@ -16,9 +16,20 @@ class RumusActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_rumus)
 
-        // 🔹 Ambil title & desc
-        val title = intent.getStringExtra("title")
-        val desc = intent.getStringExtra("desc")
+        // Setup Toolbar & Back Button
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbarRumus)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        // Ambil title & desc
+        val title = intent.getStringExtra("title") ?: "Kalkulator Geometri"
+        val desc = intent.getStringExtra("desc") ?: "Masukkan data di bawah ini."
+
+        supportActionBar?.title = title
+
+        toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
 
         findViewById<TextView>(R.id.tvTitle).text = title
         findViewById<TextView>(R.id.tvDesc).text = desc
