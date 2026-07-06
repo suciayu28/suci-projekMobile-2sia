@@ -74,5 +74,23 @@
             android:text="Tanggal Pengajuan: 03 Jul 2026"
             android:textColor="#64748B"
             android:textSize="12sp" />
+
+        <!-- PERTEMUAN 13: Tombol Generate QR (muncul hanya jika status Selesai) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGenerateQr"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:text="🔲 Lihat QR Bukti Surat"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:backgroundTint="@color/bina_desa_blue"
+            app:cornerRadius="8dp"
+            app:icon="@android:drawable/ic_menu_zoom"
+            app:iconGravity="textStart"
+            app:iconTint="@android:color/white" />
+
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

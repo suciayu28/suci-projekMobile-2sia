@@ -129,6 +129,50 @@
                         android:lines="4" />
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <!-- PERTEMUAN 13: Foto Dokumen Pendukung dengan Kamera -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Foto Dokumen Pendukung (Opsional)"
+                    android:textColor="@color/bina_desa_blue"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Preview foto dokumen yang diambil -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardFotoDokumen"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginBottom="12dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E2E8F0">
+                    <ImageView
+                        android:id="@+id/ivFotoDokumen"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Foto Dokumen" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Tombol Ambil Foto KTP/Dokumen -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFotoKtp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="📷  Ambil Foto KTP / Dokumen"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="@color/bina_desa_blue"
+                    app:strokeWidth="1.5dp" />
+
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_submit_permohonan"
                     android:layout_width="match_parent"

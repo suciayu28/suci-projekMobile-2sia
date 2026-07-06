@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PERTEMUAN 13: Frame visual untuk area pemindai QR Code (scan_border.xml)
+    Ditampilkan di atas PreviewView CameraX sebagai panduan pengguna saat scan.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Lapisan 1: Latar belakang gelap transparan di luar area scan -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#88000000" />
+        </shape>
+    </item>
+
+    <!-- Lapisan 2: Kotak border berwarna biru/putih di tengah sebagai area scan -->
+    <item
+        android:bottom="100dp"
+        android:left="60dp"
+        android:right="60dp"
+        android:top="100dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#00000000" />
+            <stroke
+                android:width="3dp"
+                android:color="#FFFFFF" />
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+</layer-list>

@@ -24,6 +24,34 @@ class TabRiwayatStatusFragment : Fragment(R.layout.activity_tab_riwayat_status_f
 
         binding.rvRiwayatStatus.layoutManager = LinearLayoutManager(requireContext())
         fetchRiwayatStatus()
+
+        // PERTEMUAN 13: Logika Tombol Scan QR (Menggunakan GmsBarcodeScanner dari Play Services)
+        binding.btnScanQrRiwayat.setOnClickListener {
+            mulaiScanQr()
+        }
+    }
+
+    private fun mulaiScanQr() {
+        val options = com.google.mlkit.vision.codescanner.GmsBarcodeScannerOptions.Builder()
+            .setBarcodeFormats(com.google.mlkit.vision.barcode.common.Barcode.FORMAT_QR_CODE)
+            .enableAutoZoom()
+            .build()
+            
+        val scanner = com.google.mlkit.vision.codescanner.GmsBarcodeScanning.getClient(requireContext(), options)
+        
+        scanner.startScan()
+            .addOnSuccessListener { barcode ->
+                val hasilScan = barcode.rawValue ?: "QR Kosong"
+                binding.cardHasilScan.visibility = View.VISIBLE
+                binding.tvHasilScanRiwayat.text = hasilScan
+            }
+            .addOnCanceledListener {
+                // User cancel scan
+            }
+            .addOnFailureListener { e ->
+                binding.cardHasilScan.visibility = View.VISIBLE
+                binding.tvHasilScanRiwayat.text = "Error: ${e.message}"
+            }
     }
 
     fun fetchRiwayatStatus() {

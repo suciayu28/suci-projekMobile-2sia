@@ -72,4 +72,23 @@ dependencies {
     implementation("androidx.room:room-runtime:$room_version")
     implementation("androidx.room:room-ktx:$room_version")
     ksp("androidx.room:room-compiler:$room_version")
+
+    // ==========================================
+    // PERTEMUAN 13: KAMERA, QR CODE & BARCODE SCANNER
+    // ==========================================
+
+    // ZXing – Generate QR Code sebagai Bitmap
+    implementation("com.google.zxing:core:3.5.3")
+
+    // CameraX – Preview kamera real-time untuk scan QR
+    val camerax_version = "1.3.4"
+    implementation("androidx.camera:camera-core:$camerax_version")
+    implementation("androidx.camera:camera-camera2:$camerax_version")
+    implementation("androidx.camera:camera-lifecycle:$camerax_version")
+    implementation("androidx.camera:camera-view:$camerax_version")
+
+    // ML Kit – Deteksi Barcode & QR Code
+    implementation("com.google.mlkit:barcode-scanning:17.3.0")
+    // Scanner modern praktis tanpa CameraX setup
+    implementation("com.google.android.gms:play-services-code-scanner:16.1.0")
 }

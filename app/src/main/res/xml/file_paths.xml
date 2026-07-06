@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PERTEMUAN 13: Konfigurasi path untuk FileProvider
+    Digunakan agar Intent kamera bisa menyimpan foto ke folder internal aplikasi.
+-->
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Folder internal aplikasi: /data/data/com.example.suci_loyalty/files/ -->
+    <files-path
+        name="my_images"
+        path="Pictures/" />
+    <!-- Folder eksternal kustom untuk galeri -->
+    <external-files-path
+        name="my_external_images"
+        path="Pictures/" />
+</paths>
